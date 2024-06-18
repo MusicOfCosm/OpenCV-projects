@@ -1,0 +1,8 @@
+RL
+
+
+You must only type R (for right) or L (for left) in the first line. (There must be at least two letters)
+They define the rules of the "ant" when it steps on a color:
+For every letter, there is a color. They define whether the ant must go Left or Right upon stepping on it.
+
+https://en.wikipedia.org/wiki/Langton%27s_ant
