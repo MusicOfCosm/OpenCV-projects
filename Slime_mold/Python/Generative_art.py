@@ -250,8 +250,7 @@ cv.setWindowProperty(WINDOW, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
 
 # cv.setWindowProperty(WINDOW, cv.WND_PROP_FULLSCREEN, cv.WINDOW_AUTOSIZE)
 
-# img_map = cv.imread("Bee_map.png", 0)
-img_map = cv.imread("../Art_map.png", 1)
+img_map = cv.imread("Art_map.png", 1)
 img_map = cv.resize(img_map, (HEIGHT, WIDTH))
 # invert = cv.bitwise_not(img_map)
 
@@ -287,9 +286,9 @@ if __name__ == '__main__':
 
         # canvas[:,:] = img_map
         # canvas = cv.add(canvas, img_map)//4
-        gray = cv.subtract(cv.cvtColor(img_map, cv.COLOR_BGR2GRAY), gray)
+        # gray = cv.subtract(cv.cvtColor(img_map, cv.COLOR_BGR2GRAY), gray)
         # gray[:,:] = gray - 0.9*cv.cvtColor(img_map, cv.COLOR_BGR2GRAY)
-        gray = cv.add(gray, cv.cvtColor(img_map, cv.COLOR_BGR2GRAY))//70
+        # gray = cv.add(gray, cv.cvtColor(img_map, cv.COLOR_BGR2GRAY))//70 #best one
         # gray = img_map
 
         # [agent.movement() for agent in agents]
