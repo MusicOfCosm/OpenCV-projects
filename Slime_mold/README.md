@@ -1,6 +1,6 @@
 # Slime mold
 
-In April 2022, I got interested in [Sebastian Lague](https://www.youtube.com/@SebastianLague)'s [Slime mold simulation](https://www.youtube.com/watch?v=X-iSQQgOd1A), I wanted to replicate it. After searching and searching, I decided to use [OpenCV](https://opencv.org/), since sentdex had a [tutorial](https://pythonprogramming.net/loading-images-python-opencv-tutorial/) on it.*
+In April 2022, I got interested in [Sebastian Lague](https://www.youtube.com/@SebastianLague)'s [Slime mold simulation](https://www.youtube.com/watch?v=X-iSQQgOd1A), I wanted to replicate it. After searching and searching, I decided to use [OpenCV](https://opencv.org/), since sentdex had a [tutorial](https://pythonprogramming.net/loading-images-python-opencv-tutorial/) on it.
 
 I managed to make it work, but it was extremely slow. Seeing C++ in the documentation, I tried to use it; I was stubborn and didn't want to follow all the tutorials which told me to use [Visual Studio](https://visualstudio.microsoft.com/), but I couldn't really figure out how to make it work with [CMake](https://cmake.org/) and [Sublime Text](https://www.sublimetext.com/). Eventually, I learned [Cython](https://cython.org/), and made the script run way faster, but I still wasn't satisfied.
 
@@ -15,7 +15,7 @@ Before implementing the `sense()` method, I wanted to test `movement()` to see i
 
 Coming back to the first file, I managed to make it work, but it is abysmally slow, even with only about a thousand agents.
 
-After first failing to use C/C++, I searched how to use C in Python, and that's how I found Cython. I took me a while to understand how things worked, but I think I managed well enough (though I didn't understand the error messages). Still, despite being almost twenty times faster than Python, it wasn't fast enough. I was especially disappointed that I had to copy the arrays every time. opencv-python couldn't its function with `memoryview()` objects, and trying to declare the arrays at a global scope didn't work.
+After first failing to use C/C++, I searched how to use C in Python, and that's how I found Cython. I took me a while to understand how things worked, but I think I managed well enough (though I didn't understand the error messages). Still, despite being almost twenty times faster than Python, it wasn't fast enough. I was especially disappointed that I had to copy the arrays every time. opencv-python couldn't use its function with `memoryview()` objects, and trying to declare the arrays at a global scope didn't work.
 
 `Generative_art_cy.pyx` is the Cython version of `Generative_art.py`, `setup.py` is used to compile it, and `Actual_art.py` to run it.
 
