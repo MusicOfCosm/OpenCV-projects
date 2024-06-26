@@ -1,4 +1,4 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 import cv2 as cv #OpenCV COLORs work with bgr instead of rgb
 import numpy as np
 #import numba as nb # If a problem arises, check "C:\Users\...\AppData\Local\Programs\Python\Python310\Lib\site-packages\numba\__init__.py" line 139
